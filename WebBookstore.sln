@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebBookstore", "WebBookstore\WebBookstore.csproj", "{71103D8E-1AF8-4E2E-839B-BB77467BDBAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{E0D9C01F-038B-4C58-8B3A-8FB524524D62}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71103D8E-1AF8-4E2E-839B-BB77467BDBAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71103D8E-1AF8-4E2E-839B-BB77467BDBAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71103D8E-1AF8-4E2E-839B-BB77467BDBAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71103D8E-1AF8-4E2E-839B-BB77467BDBAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0D9C01F-038B-4C58-8B3A-8FB524524D62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0D9C01F-038B-4C58-8B3A-8FB524524D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0D9C01F-038B-4C58-8B3A-8FB524524D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0D9C01F-038B-4C58-8B3A-8FB524524D62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BF9ED764-353A-4CD3-B266-5A7D869A9104}
+	EndGlobalSection
+EndGlobal

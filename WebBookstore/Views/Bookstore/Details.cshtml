@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<style>
+    .dathang {
+        background-color: #4CAF50; /* Green */
+        border: 1px solid green;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+        width: 150px;
+        display: block;
+        float: right;
+    }
+
+        .dathang:not(:last-child) {
+            border-bottom: none; /* Prevent double borders */
+        }
+
+        .dathang:hover {
+            background-color: #3e8e41;
+        }
+</style>
+
+<h2>THÔNG TIN CHI TIẾT SÁCH</h2>
+<h3 style="color: red; font-style: 25">Tên sách: @Model.TenSach</h3>
+<div class="col-sm-6 col-lg-6 col-md-6">
+    <div>
+        <img src="~/product_imgs/@Model.AnhBia" alt="@Model.TenSach " width="100%" />
+    </div>
+</div>
+<div class="col-sm-6 col-lg-6 col-md-6">
+    <div>
+        <p style="color: red; font-style: 25px">MÔ TẢ : </p>
+        <p>@Model.MoTa</p>
+    </div>
+    <div>
+        <p style="color: red; font-style: 25px">GIÁ : @Model.GiaBan  VND</p>
+    </div>
+    <div class="dathang">
+        <a href="@Url.Action("AddTocard","ShoppingCard", new {id=Model.MaSach})">ĐẶT HÀNG</a>
+    </div>
+</div>

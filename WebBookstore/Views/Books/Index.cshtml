@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AddminLayout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+<tr>
+    <th>@item.MaSach</th>
+    <th>@item.TenSach</th>
+    <th>@item.GiaBan</th>
+    <th>@item.MoTa</th>
+    <th><img style="width:200px; height:250px" class="img"src="~/images/@item.AnhBia" alt="" /></th>
+    <th>@item.NgayCapNhat</th>
+    <th>@item.SoLuongTon</th>
+    <th><a href="/Addmin/Edit/@item.MaSach">Sửa</a></th>
+    <th><a href="/Products/Delete/@item.MaSach">Xóa</a></th>
+
+
+
+</tr>
+}
+

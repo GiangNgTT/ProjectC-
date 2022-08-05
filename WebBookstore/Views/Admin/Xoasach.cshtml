@@ -1,0 +1,89 @@
+﻿@model WebBookstore.Models.Sach
+
+@{
+    ViewBag.Title = "Xoasach";
+    Layout = "~/Views/Shared/AddminLayout.cshtml";
+}
+
+<h2>XOA SACH</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Sach</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           Ten Sach
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSach)
+        </dd>
+
+        <dt>
+            Gia
+        </dt>
+
+        <dd>
+            @String.Format("{0:0,0}", Model.GiaBan) VND
+        </dd>
+
+        <dt>
+           Mo ta
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MoTa)
+        </dd>
+
+        <dt>
+           Anh bia
+        </dt>
+
+        <dd>
+            <img src="@Url.Content("~/product_imgs/"+Model.AnhBia)" Style = "width: 100px" alt="Alternate Text" />
+        </dd>
+
+        <dt>
+            Ngay cap nhat
+        </dt>
+
+        <dd>
+            @String.Format("{0:dd/MM/yyyy}", Model.NgayCapNhat) 
+        </dd>
+
+        <dt>
+            So luong ton
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuongTon)
+        </dd>
+
+        <dt>
+          Chu de
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChuDe.TenChuDe)
+        </dd>
+
+        <dt>
+            Nha xuat ban
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhaXuatBan.TenNXB)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xoa" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Sach")
+        </div>
+    }
+</div>

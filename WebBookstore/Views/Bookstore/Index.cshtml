@@ -1,0 +1,44 @@
+﻿@using WebBookstore.Models;
+@using PagedList.Mvc;
+@Model PagedList.PagedList<Sach>
+    @model PagedList.PagedList<WebBookstore.Models.Sach>
+
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_LayoutUser.cshtml";
+    }
+
+    <h3 style="color:red ; text-align:center">SÁCH MỚI</h3>
+
+    <div class="row">
+        @foreach (var sach in Model)
+        {
+            <div class="col-sm-4 col-lg-4 col-md-4">
+                <div class="thumbnail">
+                    <a href="@Url.Action("Details", "Bookstore", new { id = sach.MaSach })">
+                        <img src="~/product_imgs/@sach.AnhBia" alt="@sach.TenSach" width="200" />
+                        @sach.TenSach
+                    </a>
+                    <h4>@sach.GiaBan VND</h4>
+                </div>
+                <div class="ratings">
+                    <p class="pull-right">15 review</p>
+                    <p>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </p>
+                </div>
+            </div>
+        }
+    </div>
+    @*Tạo trang liên kết*@
+    Trang @(Model.PageCount <Model.PageNumber?0:Model.PageNumber)/@Model.PageCount;
+    <div>
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+    </div>
+
+
+
